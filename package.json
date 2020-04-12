@@ -1,0 +1,27 @@
+{
+    "name": "vscode-ion-shell",
+    "displayName": "VSCode Ion Shell",
+    "description": "Syntax highlighting for the ion-shell",
+    "version": "0.0.1",
+    "repository": "https://github.com/JesterOrNot/vscode-ion-shell",
+    "publisher": "JesterOrNot",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ionshell",
+            "aliases": ["ion-shell", "ionshell"],
+            "extensions": [".ion"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ionshell",
+            "scopeName": "source.ion",
+            "path": "./syntaxes/ionshell.tmLanguage.json"
+        }]
+    }
+}
