@@ -2,7 +2,7 @@
     "name": "vscode-ion-shell",
     "displayName": "VSCode Ion Shell",
     "description": "Syntax highlighting for the ion-shell",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "repository": "https://github.com/JesterOrNot/vscode-ion-shell",
     "publisher": "JesterOrNot",
     "engines": {
