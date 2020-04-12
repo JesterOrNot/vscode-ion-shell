@@ -6,6 +6,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#comments"
+    },
+    {
       "include": "#strings"
     }
   ],
@@ -14,14 +17,24 @@
       "patterns": [
         {
           "name": "keyword.control.ionshell",
-        "match": "\\b(let|if|fn|test|for|in|end|else|echo)\\b"
+          "match": "\\b(let|if|fn|test|for|in|end|else|echo)\\b"
         }
       ]
     },
     "comment": {
-      "name": "comment.line.ionshell",
       "begin": "#",
-      "end": "\n",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.ionshell"
+        }
+      },
+      "end": "\\n",
+      "name": "comment.line.number-sign.ionshell"
+    },
+    "strings": {
+      "name": "string.quoted.double.ionshell",
+      "begin": "\"",
+      "end": "\"",
       "patterns": [
         {
           "name": "constant.character.escape.ionshell",
@@ -29,10 +42,10 @@
         }
       ]
     },
-    "strings": {
-      "name": "string.quoted.double.ionshell",
-      "begin": "\"",
-      "end": "\"",
+    "singleQuoteString": {
+      "name": "string.quoted.single.ionshell",
+      "begin": "'",
+      "end": "'",
       "patterns": [
         {
           "name": "constant.character.escape.ionshell",
