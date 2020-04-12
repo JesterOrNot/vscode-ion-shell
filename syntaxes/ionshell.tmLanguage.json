@@ -16,6 +16,12 @@
     },
     {
       "include": "#Variable"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#process"
     }
   ],
   "repository": {
@@ -47,6 +53,9 @@
         {
           "name": "constant.character.escape.ionshell",
           "match": "\\\\."
+        },
+        {
+          "include": "#Variable"
         }
       ]
     },
@@ -54,9 +63,43 @@
       "patterns": [
         {
           "name": "variable.language.ionshell",
-          "match": "\\$\\b(.*)\\b"
+          "match": "\\$[a-zA-Z0-9_]+"
+        },
+        {
+          "name": "variable.language.ionshell",
+          "begin": "\\$\\{",
+          "end": "\\}"
+        },
+        {
+          "name": "variable.language.ionshell",
+          "begin": "@\\{",
+          "end": "\\}"
+        },
+        {
+          "name": "variable.language.ionshell",
+          "match": "@[a-zA-Z0-9_]+"
         }
-      ] 
+      ]
+    },
+    "process": {
+      "patterns": [
+        {
+          "name": "string.interpolated.dollar.ionshell",
+          "match": "\\$\\(.*\\)"
+        },
+        {
+          "name": "string.interpolated.dollar.ionshell",
+          "match": "@\\(.*\\)"
+        }
+      ]
+    },
+    "number": {
+      "patterns": [
+        {
+          "name": "constant.numeric.ionshell",
+          "match": "[+-]?[0-9]*[.]?[0-9]+e?"
+        }
+      ]
     },
     "singleQuoteString": {
       "name": "string.quoted.single.ionshell",
@@ -66,6 +109,9 @@
         {
           "name": "constant.character.escape.ionshell",
           "match": "\\\\."
+        },
+        {
+          "include": "#Variable"
         }
       ]
     }
