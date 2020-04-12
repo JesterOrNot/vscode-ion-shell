@@ -23,5 +23,6 @@ end
 # now a completely reactive config file
 let x
 let
-
+$xx
+$(x)
 #f
