@@ -12,16 +12,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "ionshell",
-            "aliases": ["ion-shell", "ionshell"],
-            "extensions": [".ion"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ionshell",
-            "scopeName": "source.ion",
-            "path": "./syntaxes/ionshell.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "ionshell",
+                "aliases": [
+                    "ion-shell",
+                    "ionshell"
+                ],
+                "extensions": [
+                    ".ion"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ionshell",
+                "scopeName": "source.ion",
+                "path": "./syntaxes/ionshell.tmLanguage.json"
+            }
+        ]
     }
 }
