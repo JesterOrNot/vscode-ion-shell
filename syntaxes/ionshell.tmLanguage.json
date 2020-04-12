@@ -6,10 +6,13 @@
       "include": "#keywords"
     },
     {
-      "include": "#comments"
+      "include": "#strings"
     },
     {
-      "include": "#strings"
+      "include": "#comment"
+    },
+    {
+      "include": "#singleQuoteString"
     }
   ],
   "repository": {
@@ -22,14 +25,12 @@
       ]
     },
     "comment": {
-      "begin": "#",
-      "beginCaptures": {
-        "0": {
-          "name": "punctuation.definition.comment.ionshell"
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.ionshell",
+          "match": "#.*"
         }
-      },
-      "end": "\\n",
-      "name": "comment.line.number-sign.ionshell"
+      ]
     },
     "strings": {
       "name": "string.quoted.double.ionshell",
