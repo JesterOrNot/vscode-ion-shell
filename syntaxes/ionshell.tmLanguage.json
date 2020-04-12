@@ -13,6 +13,9 @@
     },
     {
       "include": "#singleQuoteString"
+    },
+    {
+      "include": "#Variable"
     }
   ],
   "repository": {
@@ -42,6 +45,14 @@
           "match": "\\\\."
         }
       ]
+    },
+    "Variable": {
+      "patterns": [
+        {
+          "name": "variable.language.ionshell",
+          "match": "\\$\\b(.*)\\b"
+        }
+      ] 
     },
     "singleQuoteString": {
       "name": "string.quoted.single.ionshell",
