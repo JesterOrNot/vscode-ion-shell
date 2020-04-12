@@ -1,45 +1,55 @@
 {
-  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "ion-shell",
-  "patterns": [
-    {
-      "include": "#keywords"
-    },
-    {
-      "include": "#strings"
-    }
-  ],
-  "repository": {
-    "keywords": {
-      "patterns": [
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "ion-shell",
+    "patterns": [
         {
-          "name": "keyword.control.ionshell",
-        "match": "\\b(let|if|fn|test|for|in|end|else|echo)\\b"
-        }
-      ]
-    },
-    "comment": {
-      "name": "comment.line.ionshell",
-      "begin": "#",
-      "end": "\n",
-      "patterns": [
+            "include": "#keywords"
+        },
         {
-          "name": "constant.character.escape.ionshell",
-          "match": "\\\\."
+            "include": "#strings"
         }
-      ]
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.ionshell",
+                    "match": "\\b(let|if|fn|test|for|in|end|else|echo)\\b"
+                }
+            ]
+        },
+        "comment": {
+            "begin": "#",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.python"
+                }
+            },
+            "end": "\\n",
+            "name": "comment.line.number-sign.python"
+        },
+        "strings": {
+            "name": "string.quoted.double.ionshell",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.ionshell",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "singleQuoteString": {
+            "name": "string.quoted.single.ionshell",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.ionshell",
+                    "match": "\\\\."
+                }
+            ]
+        }
     },
-    "strings": {
-      "name": "string.quoted.double.ionshell",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [
-        {
-          "name": "constant.character.escape.ionshell",
-          "match": "\\\\."
-        }
-      ]
-    }
-  },
-  "scopeName": "source.ion"
+    "scopeName": "source.ion"
 }

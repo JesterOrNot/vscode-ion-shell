@@ -6,4 +6,4 @@ tasks:
       vsce package
 vscode:
   extensions:
-    - JesterOrNot.vscode-ion-shell@0.0.1:T88E6OFG/78tFlSwF4CcHw==
+    - JesterOrNot.vscode-ion-shell@0.0.3:aK54S7xNhLz73rrIuUJNgg==
