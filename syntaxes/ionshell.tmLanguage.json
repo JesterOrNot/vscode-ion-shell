@@ -14,12 +14,12 @@
       "patterns": [
         {
           "name": "keyword.control.ionshell",
-          "match": "\\b(let|if|fn)\\b"
+        "match": "\\b(let|if|fn|test|for|in|end|else|echo)\\b"
         }
       ]
     },
     "comment": {
-      "name": "comment.ionshell",
+      "name": "comment.line.ionshell",
       "begin": "#",
       "end": "\n",
       "patterns": [
